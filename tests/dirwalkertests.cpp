@@ -4,8 +4,8 @@
 
 #include <gtest/gtest.h>
 
-#include <example.hpp>
+#include <dirwalker.hpp>
 
-TEST(Example, EmptyTest) {
-    EXPECT_THROW(example(), std::runtime_error);
-}
+//TEST(Example, EmptyTest) {
+//    EXPECT_THROW(example(), std::runtime_error);
+//}
