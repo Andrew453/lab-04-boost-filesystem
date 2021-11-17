@@ -1,4 +1,4 @@
-// Copyright 2021 Your Name <your_email>
+// Copyright 2021 Prokushev Andrew <senior.prockuschev2017@yandex.ru>
 
 #include <stdexcept>
 
@@ -6,6 +6,6 @@
 
 #include <dirwalker.hpp>
 
-//TEST(Example, EmptyTest) {
-//    EXPECT_THROW(example(), std::runtime_error);
-//}
+TEST(Example, EmptyTest) {
+    EXPECT_THROW(example(), std::runtime_error);
+}
