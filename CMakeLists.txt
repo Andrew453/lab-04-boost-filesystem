@@ -40,6 +40,7 @@ add_library(${PROJECT_NAME} STATIC
 
 add_executable(demo
         ${CMAKE_CURRENT_SOURCE_DIR}/demo/main.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/dirwalker.cpp
         )
 
 target_include_directories(${PROJECT_NAME} PUBLIC
