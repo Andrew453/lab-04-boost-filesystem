@@ -48,7 +48,7 @@ class DirectoryWalker {
 //                       std::regex("([a-z]+)/balance_([0-9]+)_([0-9]+).txt"));
 //          if (m[0] != "") {
 //            if (output_list) {
-//              std::cout << m[1] << " balance_" << m[2] << "_" << m[3] << ".txt"
+//             std::cout << m[1] << " balance_" << m[2] << "_" << m[3] << ".txt"
 //                        << std::endl;
 //            }
 //            for (auto& st : statistics) {
