@@ -6,17 +6,13 @@
 
 #include "boost/filesystem.hpp"
 
-using namespace std;
-
-DirectoryWalker::DirectoryWalker() {
-
-}
 void DirectoryWalker::output_statistics() {
   for (auto& st : statistics) {
-    std::cout << "broker: " << setw(10) << left << st.broker
-              << "account:" << setw(10) << left << st.account
-              << "number of files:" << setw(10) << left << st.num_files
-              << "lastdate:" << setw(10) << left << st.date << endl;
+    std::cout << "broker: " << std::setw(10) << std::left << st.broker
+              << "account:" << std::setw(10) << std::left << st.account
+              << "number of files:" << std::setw(10) << std::left
+              << st.num_files << "lastdate:" << std::setw(10) << std::left
+              << st.date << std::endl;
   }
 }
 
@@ -35,14 +31,14 @@ void DirectoryWalker::read_directory(std::string directory, bool output_list) {
       if (is_directory(object)) {
         directories.push_back(object);
       } else if (boost::filesystem::is_regular_file(object)) {
-        cmatch m;
+        std::cmatch m;
         bool checker = false;
         regex_search(object.path().c_str(), m,
-                     regex("([a-z]+)/balance_([0-9]+)_([0-9]+).txt"));
+                     std::regex("([a-z]+)/balance_([0-9]+)_([0-9]+).txt"));
         if (m[0] != "") {
           if (output_list) {
-            cout << m[1] << " balance_" << m[2] << "_" << m[3] << ".txt"
-                 << endl;
+            std::cout << m[1] << " balance_" << m[2] << "_" << m[3] << ".txt"
+                      << std::endl;
           }
           for (auto& st : statistics) {
             if (st.broker == m[1]) {
@@ -69,6 +65,3 @@ void DirectoryWalker::read_directory(std::string directory, bool output_list) {
   }
 }
 
-DirectoryWalker::~DirectoryWalker() {
-  std::cout << "Thank you for choosing my service" << std::endl;
-}

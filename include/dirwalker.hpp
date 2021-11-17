@@ -24,9 +24,6 @@ class DirectoryWalker {
   std::vector<Statistic> statistics;
 
  public:
-  DirectoryWalker();
-  ~DirectoryWalker();
-
   void read_directory(std::string directory, bool output_list);
   void output_statistics();
 };
