@@ -20,7 +20,8 @@ auto example() -> void {
 //  }
 //}
 
-//void DirectoryWalker::read_directory(std::string directory, bool output_list) {
+//void DirectoryWalker::read_directory(std::string directory, bool output_list)
+// {
 //  //Записываем начальный список путей
 //  for (const boost::filesystem::directory_entry& object :
 //       boost::filesystem::directory_iterator{directory}) {
