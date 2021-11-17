@@ -10,7 +10,6 @@
 #include <vector>
 
 #include "boost/filesystem.hpp"
-auto example() -> void;
 
 struct Statistic {
   int date;

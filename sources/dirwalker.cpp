@@ -8,9 +8,6 @@
 
 using namespace std;
 
-auto example() -> void { throw std::runtime_error("not implemented"); }
-
-void DirectoryWalker::output_finded_files() {}
 DirectoryWalker::DirectoryWalker() {
 
 }
